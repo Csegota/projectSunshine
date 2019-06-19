@@ -1,5 +1,6 @@
 package com.example.android.sunshine;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.preference.CheckBoxPreference;
@@ -7,6 +8,8 @@ import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
 import android.support.v7.preference.PreferenceScreen;
+
+import com.example.android.sunshine.data.SunshinePreferences;
 
 /**
  * The SettingsFragment serves as the display for all of the user's settings. In Sunshine, the
@@ -22,7 +25,6 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
 
     private void setPreferenceSummary(Preference preference, Object value) {
         String stringValue = value.toString();
-        String key = preference.getKey();
 
         if (preference instanceof ListPreference) {
             /* For list preferences, look up the correct display value in */
@@ -73,6 +75,13 @@ public class SettingsFragment extends PreferenceFragmentCompat implements
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        Activity activity = getActivity();
+
+        if (key.equals(getString(R.string.pref_location_key))) {
+            // we've changed the location
+            // Wipe out any potential PlacePicker latlng values so that we can use this text entry.
+            SunshinePreferences.resetLocationCoordinates(activity);
+        }
         Preference preference = findPreference(key);
         if (null != preference) {
             if (!(preference instanceof CheckBoxPreference)) {
