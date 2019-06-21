@@ -295,7 +295,6 @@ public class WeatherProvider extends ContentProvider {
         return cursor;
     }
 
-    //  COMPLETED (1) Implement the delete method of the ContentProvider
     /**
      * Deletes data at a given URI with optional arguments for more fine tuned deletions.
      *
@@ -320,7 +319,6 @@ public class WeatherProvider extends ContentProvider {
 
         switch (sUriMatcher.match(uri)) {
 
-//          COMPLETED (2) Only implement the functionality, given the proper URI, to delete ALL rows in the weather table
             case CODE_WEATHER:
                 numRowsDeleted = mOpenHelper.getWritableDatabase().delete(
                         WeatherContract.WeatherEntry.TABLE_NAME,
@@ -338,7 +336,6 @@ public class WeatherProvider extends ContentProvider {
             getContext().getContentResolver().notifyChange(uri, null);
         }
 
-//      COMPLETED (3) Return the number of rows deleted
         return numRowsDeleted;
     }
 
