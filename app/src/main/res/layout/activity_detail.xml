@@ -12,7 +12,6 @@
      limitations under the License.
 -->
 
-<!-- COMPLETED (1) Change the FrameLayout to a vertical LinearLayout -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,9 +19,6 @@
     android:orientation="vertical"
     android:padding="8dp">
 
-    <!-- COMPLETED (2) Remove the tv_display_weather TextView -->
-
-    <!-- COMPLETED (3) Add a TextView for the selected day's date -->
     <TextView
         android:id="@+id/date"
         style="@style/TextAppearance.AppCompat.Large"
@@ -30,7 +26,6 @@
         android:layout_height="wrap_content"
         tools:text="Saturday, September 24"/>
 
-    <!-- COMPLETED (4) Add a TextView for the selected day's weather description -->
     <!-- Text that describes weather condition -->
     <TextView
         android:id="@+id/weather_description"
@@ -39,7 +34,6 @@
         android:layout_height="wrap_content"
         tools:text="Rainy"/>
 
-    <!-- COMPLETED (5) Add a TextView for the selected day's high temperature -->
     <!-- High temperature for today -->
     <TextView
         android:id="@+id/high_temperature"
@@ -48,7 +42,6 @@
         android:layout_height="wrap_content"
         tools:text="19\u00b0"/>
 
-    <!-- COMPLETED (6) Add a TextView for the selected day's low temperature -->
     <!-- Low temperature for today -->
     <TextView
         android:id="@+id/low_temperature"
@@ -57,7 +50,6 @@
         android:layout_height="wrap_content"
         tools:text="10\u00b0"/>
 
-    <!-- COMPLETED (7) Add a TextView for the selected day's humidity -->
     <!-- Humidity  -->
     <TextView
         android:id="@+id/humidity"
@@ -66,7 +58,6 @@
         android:layout_height="wrap_content"
         tools:text="38%"/>
 
-    <!-- COMPLETED (8) Add a TextView for the selected day's pressure -->
     <!-- Pressure  -->
     <TextView
         android:id="@+id/pressure"
@@ -75,7 +66,6 @@
         android:layout_height="wrap_content"
         tools:text="995 hPa"/>
 
-    <!-- COMPLETED (9) Add a TextView for the selected day's wind -->
     <!-- Wind  -->
     <TextView
         android:id="@+id/wind"
