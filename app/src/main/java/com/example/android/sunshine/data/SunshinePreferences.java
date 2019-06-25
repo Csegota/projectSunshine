@@ -66,12 +66,11 @@ public final class SunshinePreferences {
 
     /**
      * Returns the location currently set in Preferences. The default location this method
-     * will return is "94043,USA", which is Mountain View, California. Mountain View is the
-     * home of the headquarters of the Googleplex!
+     * will return is "90046,USA", which is West Hollywood, California.
      *
      * @param context Context used to access SharedPreferences
      * @return Location The current user has set in SharedPreferences. Will default to
-     * "94043,USA" if SharedPreferences have not been implemented yet.
+     * "90046,USA" if SharedPreferences have not been implemented yet.
      */
     public static String getPreferredWeatherLocation(Context context) {
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
