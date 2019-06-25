@@ -84,8 +84,6 @@ public class MainActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_forecast);
         getSupportActionBar().setElevation(0f);
 
-        // COMPLETED (12) Remove the fake data creation since we can now sync with live data
-
         /*
          * Using findViewById, we get a reference to our RecyclerView from xml. This allows us to
          * do things like set the adapter of the RecyclerView and toggle the visibility.
@@ -151,8 +149,8 @@ public class MainActivity extends AppCompatActivity implements
          */
         getSupportLoaderManager().initLoader(ID_FORECAST_LOADER, null, this);
 
-        //      COMPLETED (13) Call SunshineSyncUtils's startImmediateSync method
-        SunshineSyncUtils.startImmediateSync(this);
+        //      COMPLETED (7) Call SunshineSyncUtils's initialize method instead of startImmediateSync
+        SunshineSyncUtils.initialize(this);
     }
 
     /**

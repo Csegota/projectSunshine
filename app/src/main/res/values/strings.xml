@@ -214,7 +214,7 @@
     <string name="condition_962">Hurricane</string>
 
     <string name="condition_unknown">Unknown (<xliff:g id="conditionId">%1$d</xliff:g>)</string>
-    
+
     <!-- Used by NotificationUtils -->
 
     <!-- The format of the notification we show when the weather is updated -->
