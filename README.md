@@ -1,6 +1,6 @@
 # projectSunshine
 
-This project was the result of completing the following course:
+This project was the result of completing the following course from https://www.udacity.com/:
 
 **Developing Android Apps**
 
